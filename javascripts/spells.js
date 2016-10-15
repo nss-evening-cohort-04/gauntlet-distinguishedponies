@@ -1,4 +1,5 @@
 "use strict";
+
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
@@ -6,6 +7,7 @@
 var Gauntlet = (function(spellsGauntlet) {
 
   spellsGauntlet.SpellBook = {};
+
 
 
   /*

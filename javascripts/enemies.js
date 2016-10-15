@@ -1,8 +1,10 @@
 "use strict";
 
+
 var Gauntlet = (function(enemiesGauntlet) {
 
 enemiesGauntlet.Enemies = {};
+
 
   enemiesGauntlet.Combatants.Orc = function() {
     this.health = this.health + 20;
