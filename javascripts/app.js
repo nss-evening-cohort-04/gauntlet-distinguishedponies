@@ -1,7 +1,9 @@
 "use strict";
+
 /*
   Test code to generate a human player and an orc player
  */
+
 // var warrior = new Gauntlet.Combatants.Human();
 // warrior.setWeapon(new WarAxe());
 // warrior.generateClass();  // This will be used for "Surprise me" option
