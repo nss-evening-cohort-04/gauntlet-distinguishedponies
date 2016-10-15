@@ -16,7 +16,7 @@ console.log(orc.toString());
  */
 var spell = new Gauntlet.SpellBook.Sphere();
 console.log("spell: ", spell.toString());
-
+console.log("spell", spell);
 
 $(document).ready(function() {
   /*
@@ -30,6 +30,7 @@ $(document).ready(function() {
    */
   $(".card__link").click(function(e) {
     var nextCard = $(this).attr("next");
+    console.log("nextCard", nextCard);
     var moveAlong = false;
 
     switch (nextCard) {
@@ -37,6 +38,9 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
         break;
       case "card--weapon":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--battleground":
         moveAlong = ($("#player-name").val() !== "");
         break;
     }
