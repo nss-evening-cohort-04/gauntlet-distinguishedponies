@@ -17,9 +17,35 @@
  */
 var spell = new Gauntlet.SpellBook.Sphere();
 console.log("spell: ", spell.toString());
-console.log("spell", spell);
+var $classSelected;
+var $weaponSelected;
+
+console.log("Gauntlet", Gauntlet);
+
+var warrior = new Gauntlet.Combatants.Player();
+warrior.playerName = "Justin";
+warrior.setWeapon(new Gauntlet.Weapons.WarAxe());
+
+// warrior.generateClass();  // This will be used for "Surprise me" option
+// console.log(warrior.toString());
+console.log("warrior", warrior);
 
 $(document).ready(function() {
+
+  // eventListeners
+  // eventListener for classSelected
+  // get the class selected
+  $('.class_selected').click((event) =>{
+    $classSelected = event.target.lastChild;
+    console.log("$classSelected", $classSelected);
+  });
+
+  // get the weapon selected
+  $('.weapon_selected').click((event) =>{
+    $weaponSelected = event.target.lastChild;
+    console.log("$weaponSelected", $weaponSelected);
+  });
+
   /*
     Show the initial view that accepts player name
    */
@@ -33,10 +59,13 @@ $(document).ready(function() {
     var nextCard = $(this).attr("next");
     console.log("nextCard", nextCard);
     var moveAlong = false;
+    var playerName = $("#player-name");
 
     switch (nextCard) {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
+        // get players name
+        playerName.val();
         break;
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
