@@ -4,16 +4,6 @@
   Test code to generate a human player and an orc player
  */
 
-// var warrior = new Gauntlet.Combatants.Human();
-// warrior.setWeapon(new WarAxe());
-// warrior.generateClass();  // This will be used for "Surprise me" option
-// console.log(warrior.toString());
-
-// var orc = new Gauntlet.Combatants.Orc();
-// orc.generateClass();
-// orc.setWeapon(new BroadSword());
-// console.log(orc.toString());
-
 /*
   Test code to generate a spell
  */
@@ -24,13 +14,8 @@ var $weaponSelected;
 
 console.log("Gauntlet", Gauntlet);
 
-var warrior = new Gauntlet.Combatants.Player();
-warrior.playerName = "Justin";
-warrior.setWeapon(new Gauntlet.Weapons.WarAxe());
-
-// warrior.generateClass();  // This will be used for "Surprise me" option
-// console.log(warrior.toString());
-console.log("warrior", warrior);
+var player1 = new Gauntlet.Combatants.Player();
+// player1.setWeapon(new Gauntlet.Weapons.Dagger());
 
 $(document).ready(function() {
 
@@ -44,8 +29,19 @@ $(document).ready(function() {
 
   // get the weapon selected
   $('.weapon_selected').click((event) =>{
-    $weaponSelected = event.target.lastChild;
-    console.log("$weaponSelected", $weaponSelected);
+    // I will try to find a better way to do this..... JL
+    // console.log("event.target", event.target);
+    $weaponSelected = $(event.target).attr("value");
+    if($weaponSelected === "Dagger") {
+      player1.setWeapon(new Gauntlet.Weapons.Dagger());
+      console.log("player1", player1);
+    } else if ($weaponSelected === "Axe") {
+      player1.setWeapon(new Gauntlet.Weapons.Dagger());
+      console.log("player1", player1);
+    } else {
+      player1.setWeapon(new Gauntlet.Weapons.Dagger());
+      console.log("player1", player1);
+    }
   });
 
   /*
@@ -67,7 +63,8 @@ $(document).ready(function() {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
         // get players name
-        playerName.val();
+        player1.playerName = playerName.val();
+        console.log("player1", player1);
         break;
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
