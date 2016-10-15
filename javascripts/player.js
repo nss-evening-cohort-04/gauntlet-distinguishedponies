@@ -1,4 +1,5 @@
 "use strict";
+
 /*
   TODO: Modularize this code with IIFE
  */
@@ -52,6 +53,11 @@ var Gauntlet = (function(originalGauntlet) {
   originalGauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
     this.weapon = newWeapon;
   };
+
+  originalGauntlet.Combatants.Player.prototype.setClass = function(newClass) {
+    this.class = newClass;
+  };
+
 
   originalGauntlet.Combatants.Player.prototype.generateClass = function() {
     // Get a random index from the allowed classes array
