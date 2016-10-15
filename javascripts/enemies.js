@@ -1,29 +1,15 @@
 "use strict";
-<<<<<<< Updated upstream
-=======
 
-Gauntlet.Combatants.Orc = function() {
-  this.health = this.health + 20;
-  this.species = "Orc";
-  this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
->>>>>>> Stashed changes
 
 var Gauntlet = (function(enemiesGauntlet) {
 
 enemiesGauntlet.Enemies = {};
 
-<<<<<<< Updated upstream
+
   enemiesGauntlet.Combatants.Orc = function() {
     this.health = this.health + 20;
     this.species = "Orc";
     this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
-=======
-    // Composes the corresponding player class into the player object
-    this.class = new Gauntlet.GuildHall[randomClass]();
-    return this.class;
-  };
-};
->>>>>>> Stashed changes
 
     this.generateClass = function() {
       // Get a random index from the allowed classes array

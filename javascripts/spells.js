@@ -17,12 +17,6 @@ var Gauntlet = (function(spellsGauntlet) {
     this.name = "";
     this.damage = 0;
 
-  this.toString = function() {
-    return this.name + " of " + this.type + " for " + this.damage + " damage!";
-  };
-};
-
-
     this.damageTypes = ["lightning", "fire", "water", "earth", "mysticism"];
     this.type = "";
 
