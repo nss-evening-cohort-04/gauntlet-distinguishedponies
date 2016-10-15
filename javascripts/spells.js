@@ -1,4 +1,5 @@
 "use strict";
+
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
@@ -8,12 +9,19 @@ var Gauntlet = (function(spellsGauntlet) {
   spellsGauntlet.SpellBook = {};
 
 
+
   /*
     Base spell function that defines name, damage, damage type
    */
   spellsGauntlet.SpellBook.Spell = function() {
     this.name = "";
     this.damage = 0;
+
+  this.toString = function() {
+    return this.name + " of " + this.type + " for " + this.damage + " damage!";
+  };
+};
+
 
     this.damageTypes = ["lightning", "fire", "water", "earth", "mysticism"];
     this.type = "";

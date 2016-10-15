@@ -1,4 +1,5 @@
 "use strict";
+
 /*
   TODO: Modularize this code with IIFE
  */
