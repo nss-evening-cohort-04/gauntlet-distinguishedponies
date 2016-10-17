@@ -21,6 +21,8 @@ classesGauntlet.GuildHall.PlayerClass = function() {
   this.toString = function() {
     return this.name;
   };
+
+
 };
 
 /*
@@ -133,7 +135,7 @@ classesGauntlet.GuildHall.Stealth = function() {
   this.strengthBonus = 5;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-classesGauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass(); 
+classesGauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
 classesGauntlet.GuildHall.Thief = function() {

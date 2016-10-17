@@ -22,27 +22,34 @@ $(document).ready(function() {
   // eventListeners
   // eventListener for classSelected
   // get the class selected
-  $('.class_selected').click((event) =>{
-    $classSelected = event.target.lastChild;
-    console.log("$classSelected", $classSelected);
+  $('.class_selected').click((event) => {
+    $classSelected = $(event.target).attr("value");
+    // iterate over every function in an object to determine which class was selected
+    $.each(Gauntlet.GuildHall, (event, index) => {
+      if(event === $classSelected) {
+        // index applies the current function
+        player1.setClass(new index());
+        // remove before production environment JL
+        console.log("player1", player1);
+      }
+    });
   });
 
   // get the weapon selected
   $('.weapon_selected').click((event) =>{
-    // I will try to find a better way to do this..... JL
-    // console.log("event.target", event.target);
     $weaponSelected = $(event.target).attr("value");
-    if($weaponSelected === "Dagger") {
-      player1.setWeapon(new Gauntlet.Weapons.Dagger());
-      console.log("player1", player1);
-    } else if ($weaponSelected === "Axe") {
-      player1.setWeapon(new Gauntlet.Weapons.Dagger());
-      console.log("player1", player1);
-    } else {
-      player1.setWeapon(new Gauntlet.Weapons.Dagger());
-      console.log("player1", player1);
-    }
+    // iterate over every function in an object to determine which class was selected
+    $.each(Gauntlet.Weapons,(event, index) => {
+      if(event === $weaponSelected) {
+        // index applies the current function
+        player1.setWeapon(new index());
+        // remove before production environment JL
+        console.log("player1", player1);
+      }
+    });
   });
+
+
 
   /*
     Show the initial view that accepts player name
