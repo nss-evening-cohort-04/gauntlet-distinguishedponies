@@ -7,15 +7,24 @@
 /*
   Test code to generate a spell
  */
-var spell = new Gauntlet.SpellBook.Sphere();
-console.log("spell: ", spell.toString());
-var $classSelected;
-var $weaponSelected;
-
+// let spell = new Gauntlet.SpellBook.Sphere();
+// console.log("spell: ", spell.toString());
+let $classSelected;
+let $weaponSelected;
+const enemyNames = ["Sarah the Twilight Sparkler", "Blair the Derpy Hooves", "Tommy the Applejack", "Justin the Sweetie Belle"];
+const appendPlayerName = [" Princess Celestia", " the AppleJack", " the Spike", " the Apple Bloom"];
 console.log("Gauntlet", Gauntlet);
+// randomNum between 0 - 3;
+let randomNum = Math.floor(Math.random() * 3) + 0;
 
-var player1 = new Gauntlet.Combatants.Player();
-// player1.setWeapon(new Gauntlet.Weapons.Dagger());
+let player1 = new Gauntlet.Combatants.Player();
+
+var orc = new Gauntlet.Combatants.Orc();
+orc.enemyName = enemyNames[randomNum];
+// randomly assigned health between 50 - 100
+orc.health = Math.round(Math.random() * (100 - 50));
+orc.generateClass();
+orc.setWeapon(new Gauntlet.Weapons.BroadSword());
 
 $(document).ready(function() {
 
@@ -29,8 +38,6 @@ $(document).ready(function() {
       if(event === $classSelected) {
         // index applies the current function
         player1.setClass(new index());
-        // remove before production environment JL
-        console.log("player1", player1);
       }
     });
   });
@@ -43,14 +50,24 @@ $(document).ready(function() {
       if(event === $weaponSelected) {
         // index applies the current function
         player1.setWeapon(new index());
-        // remove before production environment JL
-        console.log("player1", player1);
+        populateBattlePage();
       }
     });
   });
 
-
-
+  // battle page logic
+  function populateBattlePage() {
+    console.log("player1", player1);
+    $('#playerHp').html(`<h3>${player1.playerName}${appendPlayerName[randomNum]}</h3>
+                      <h4>You Have ${player1.health} HP</h4>
+                      <h4>Your weapon is a ${player1.weapon.name}
+                      <h4> Your Class is ${player1.class.name}`);
+    console.log("orc", orc);
+    $('#enemyHp').html(`<h3>${orc.enemyName}</h3>
+                      <h4>You Have ${orc.health} HP</h4>
+                      <h4>Your weapon is a ${orc.weapon.name}
+                      <h4> Your Class is ${orc.class.name}`);
+  }
   /*
     Show the initial view that accepts player name
    */
@@ -62,7 +79,6 @@ $(document).ready(function() {
    */
   $(".card__link").click(function(e) {
     var nextCard = $(this).attr("next");
-    console.log("nextCard", nextCard);
     var moveAlong = false;
     var playerName = $("#player-name");
 
@@ -71,7 +87,6 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
         // get players name
         player1.playerName = playerName.val();
-        console.log("player1", player1);
         break;
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");

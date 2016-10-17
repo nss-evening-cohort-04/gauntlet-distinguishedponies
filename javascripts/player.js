@@ -7,11 +7,6 @@
 
 var Gauntlet = (function(originalGauntlet) {
 
-  // originalGauntlet.WeaponRack.Weapon = function () {
-  //  this.hands = 2;
-  // };
-
-  // var Gauntlet = Gauntlet || {};
   originalGauntlet.Combatants = {};
 
   /*
