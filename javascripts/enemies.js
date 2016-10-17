@@ -1,12 +1,13 @@
 "use strict";
 
-
 var Gauntlet = (function(enemiesGauntlet) {
 
 enemiesGauntlet.Enemies = {};
 
 
-  enemiesGauntlet.Combatants.Orc = function() {
+  enemiesGauntlet.Combatants.Orc = function(name) {
+    this.enemyName = name || "unknown monster";
+    this.weapon = null;
     this.health = this.health + 20;
     this.species = "Orc";
     this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
@@ -24,7 +25,12 @@ enemiesGauntlet.Enemies = {};
     };
   };
 
-  enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Monster();
+   enemiesGauntlet.Combatants.Orc.prototype.setWeapon = function(newWeapon) {
+    this.weapon = newWeapon;
+  };
+
+  // enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Monster();
+  enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Orc();
 
   return enemiesGauntlet;
 } (Gauntlet || {}));

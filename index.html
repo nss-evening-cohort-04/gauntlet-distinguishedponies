@@ -50,28 +50,28 @@
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Warrior</span>
+                <span class="btn__text" value="Warrior">Warrior</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Valkyrie</span>
+                <span class="btn__text" value="Valkyrie">Valkyrie</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">berserker</span>
+                <span class="btn__text" value="Berserker">Berserker</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Monk</span>
+                <span class="btn__text" value="Monk">Monk</span>
               </a>
             </div>
           </div>
@@ -80,21 +80,21 @@
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Wizard</span>
+                <span class="btn__text" value="Wizard">Wizard</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Sorcerer</span>
+                <span class="btn__text" value="Sorcerer">Sorcerer</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Conjurer</span>
+                <span class="btn__text" value="Conjurer">Conjurer</span>
               </a>
             </div>
           </div>
@@ -102,28 +102,28 @@
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Thief</span>
+                <span class="btn__text" value="Thief">Thief</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Ninja</span>
+                <span class="btn__text" value="Ninja">Ninja</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">Assassin</span>
+                <span class="btn__text" value="Assassin">Assassin</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--yellow class_selected" href="#">
                 <span class="btn__prompt">></span>
-                <span class="btn__text">surprise me</span>
+                <span class="btn__text" value="Surprise Me">surprise me</span>
               </a>
             </div>
           </div>
@@ -156,7 +156,7 @@
               <div class="card__button">
                 <a class="class__link btn btn--big btn--blue weapon_selected" href="#">
                   <span class="btn__prompt">></span>
-                  <span class="btn__text">Axe</span>
+                  <span class="btn__text" value="WarAxe">WarAxe</span>
                 </a>
               </div>
             </div>
@@ -172,7 +172,7 @@
               <div class="card__button">
                 <a class="class__link btn btn--big btn--blue weapon_selected" href="#">
                   <span class="btn__prompt">></span>
-                  <span class="btn__text">Sword</span>
+                  <span class="btn__text" value="BroadSword">BroadSword</span>
                 </a>
               </div>
             </div>
@@ -213,11 +213,11 @@
       <div class="col-md-6">
         <img src="img/player.jpg" class="battleground--image">
       </div>
-    </div>        
+    </div>
 
     <div class="row padding--top">
       <div class="col-md-3">
-          <div class="stats player">
+          <div class="stats player" id="playerHp">
             <span>HP and other stats go here</span>
           </div>
       </div>
@@ -228,7 +228,7 @@
       </div>
       <div class="col-md-3 col-md-offset-1">
           <div class="stats computer">
-            <span>HP and other stats go here</span>
+            <span id="enemyHp">HP and other stats go here</span>
           </div>
       </div>
     </div>
