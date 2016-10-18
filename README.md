@@ -27,7 +27,7 @@ We have been tasked to finish building a simple web-based RPG that lets a human 
 ###Choose your weapon
 ![Chooseweapon](img/Chooseweapon.png)
 
-###Let's get it once
+###Let's get it on
 ![Battlepage](img/Battlepage.png)
 
 ###You Lost
