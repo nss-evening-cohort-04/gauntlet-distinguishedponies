@@ -1,4 +1,4 @@
-![logo](img/dispony.png)
+![logo](img/dispony1.png)
 
 # Contributors
 * [Sarah Ward](https://github.com/sward42)
@@ -28,7 +28,7 @@ Once the player has chosen all options for class, weapon, etc., you need to have
 1. As soon as either combatant reaches health of 0, disable the attack button and annouce the winner.
 
 ## ARE YOU READY TO BE A:
-![logo](img/dispony.png)
+![logo](img/dispony1.png)
 
 
 
