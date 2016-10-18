@@ -58,7 +58,10 @@ var Gauntlet = (function(originalGauntlet) {
     target.health -= this.totalDamage;
       if(target.health <= 0){
         $('#win__modal').modal("show");
+        // That way you don't display a negative hp
+        target.health = 0;
     }
+
     $('#combat').prepend(`<span id="player__name__color">${player1.playerName}${appendPlayerName[randomNum]}</span> attacks <span id="player__name__color">${orc.enemyName}</span><br/>
                           with a ${player1.weapon.name} and scores <span id="enemy__name__color">${this.totalDamage}</span> hit points.<br/>`);
   };

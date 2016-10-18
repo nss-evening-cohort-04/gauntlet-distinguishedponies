@@ -34,7 +34,8 @@ enemiesGauntlet.Enemies = {};
     target.health -= this.totalDamage;
       if(target.health <= 0){
         $('#lose__modal').modal("show");
-
+        // That way you don't display a negative hp
+        target.health = 0;
     }
     $('#combat').prepend(`<span id="player__name__color">${orc.enemyName}</span> attacks <span id="player__name__color">${player1.playerName}${appendPlayerName[randomNum]}</span><br/>
                            with a ${orc.weapon.name} and scores <span id="enemy__name__color">${this.totalDamage}</span> hit points.<br/>`);
