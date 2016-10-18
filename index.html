@@ -248,11 +248,25 @@
           <span class="btn__prompt">&lt;</span>
           <span class="btn__text">Play Again?</span>
       </a> -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+<!-- Battle is lost modal -->
+      <div class="modal fade" id="loseModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-             <h4 class="modal-title"></h4>
+             <h4 class="modal-title">You Lost!</h4>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Play Again</button>
+          </div>
+          </div>
+        </div>
+      </div>
+<!-- Battle is won modal -->
+      <div class="modal fade" id="winModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+             <h4 class="modal-title">You Won!</h4>
             </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">Play Again</button>
