@@ -242,7 +242,7 @@
 
     </section>
       <!-- skelton code for the module -->
-      <!-- <a class="card__back btn btn--big btn--orange"
+     <!--  <a class="card__back btn btn--big btn--orange"
           href="#"
           previous="card--class">
           <span class="btn__prompt">&lt;</span>
@@ -256,7 +256,12 @@
              <h4 class="modal-title">You Lost!</h4>
             </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Play Again</button>
+            <a id="hide_modal" class="card__back btn btn--big btn--orange"
+          href="#"
+          previous="card--class">
+          <span class="btn__prompt">&lt;</span>
+          <span class="btn__text">Play Again?</span>
+            </a>
           </div>
           </div>
         </div>
@@ -269,7 +274,12 @@
              <h4 class="modal-title">You Won!</h4>
             </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Play Again</button>
+             <a id="hide_modal" class="card__back btn btn--big btn--orange"
+              href="#"
+              previous="card--class">
+              <span class="btn__prompt">&lt;</span>
+              <span class="btn__text">Play Again?</span>
+            </a>
           </div>
           </div>
         </div>
@@ -277,6 +287,7 @@
   </article>
 
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="javascripts/weapons.js"></script>
   <script src="javascripts/classes.js"></script>
   <script src="javascripts/spells.js"></script>
