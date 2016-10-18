@@ -35,11 +35,8 @@ enemiesGauntlet.Enemies = {};
       if(target.health <= 0){
         $('#lose__modal').modal("show");
     }
-    console.log("orcAttack", this.totalDamage);
-    console.log("orcWeaponDam2", this.weapon.damage);
   };
 
-  // enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Monster();
   enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Orc();
 
   return enemiesGauntlet;
