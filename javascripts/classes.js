@@ -27,10 +27,10 @@ classesGauntlet.GuildHall.PlayerClass = function() {
 
 /*
     FIGHTER CLASSES
-      - Warrior
-      - Valkyrie
-      - Berserker
-      - Monk
+      - Scootaloo
+      - Fluttershy
+      - Luckette
+      - Spike
  */
 classesGauntlet.GuildHall.Fighter = function() {
   this.healthBonus = 20;
@@ -39,44 +39,44 @@ classesGauntlet.GuildHall.Fighter = function() {
 classesGauntlet.GuildHall.Fighter.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
-classesGauntlet.GuildHall.Warrior = function() {
-  this.name = "Warrior";
+classesGauntlet.GuildHall.Scootaloo = function() {
+  this.name = "Scootaloo";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
 };
-classesGauntlet.GuildHall.Warrior.prototype = new classesGauntlet.GuildHall.Fighter();
+classesGauntlet.GuildHall.Scootaloo.prototype = new classesGauntlet.GuildHall.Fighter();
 
 
-classesGauntlet.GuildHall.Valkyrie = function() {
-  this.name = "Valkyrie";
+classesGauntlet.GuildHall.Fluttershy = function() {
+  this.name = "Fluttershy";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-classesGauntlet.GuildHall.Valkyrie.prototype = new classesGauntlet.GuildHall.Fighter();
+classesGauntlet.GuildHall.Fluttershy.prototype = new classesGauntlet.GuildHall.Fighter();
 
 
-classesGauntlet.GuildHall.Berserker = function() {
-  this.name = "Berserker";
+classesGauntlet.GuildHall.Luckette = function() {
+  this.name = "Luckette";
   this.healthBonus = this.healthBonus + 35;
   this.strengthBonus = this.strengthBonus + 20;
 };
-classesGauntlet.GuildHall.Berserker.prototype = new classesGauntlet.GuildHall.Fighter();
+classesGauntlet.GuildHall.Luckette.prototype = new classesGauntlet.GuildHall.Fighter();
 
 
-classesGauntlet.GuildHall.Monk = function() {
-  this.name = "Monk";
+classesGauntlet.GuildHall.Spike = function() {
+  this.name = "Spike";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 40;
 };
-classesGauntlet.GuildHall.Monk.prototype = new classesGauntlet.GuildHall.Fighter();
+classesGauntlet.GuildHall.Spike.prototype = new classesGauntlet.GuildHall.Fighter();
 
 
 /*
     MAGICAL CLASSES
       - Shaman
-      - Wizard
+      - Applejack
       - Conujurer
-      - Sorcerer
+      - Rarity
  */
 classesGauntlet.GuildHall.Mage = function() {
   this.name = "Mage";
@@ -97,37 +97,37 @@ classesGauntlet.GuildHall.Shaman = function() {
 classesGauntlet.GuildHall.Shaman.prototype = new classesGauntlet.GuildHall.Mage();
 
 
-classesGauntlet.GuildHall.Wizard = function() {
-  this.name = "Wizard";
+classesGauntlet.GuildHall.Applejack = function() {
+  this.name = "Applejack";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-classesGauntlet.GuildHall.Wizard.prototype = new classesGauntlet.GuildHall.Mage();
+classesGauntlet.GuildHall.Applejack.prototype = new classesGauntlet.GuildHall.Mage();
 
 
-classesGauntlet.GuildHall.Conjurer = function() {
-  this.name = "Conjurer";
+classesGauntlet.GuildHall.Snips = function() {
+  this.name = "Snips";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-classesGauntlet.GuildHall.Conjurer.prototype = new classesGauntlet.GuildHall.Mage();
+classesGauntlet.GuildHall.Snips.prototype = new classesGauntlet.GuildHall.Mage();
 
 
-classesGauntlet.GuildHall.Sorcerer = function() {
-  this.name = "Sorcerer";
+classesGauntlet.GuildHall.Rarity = function() {
+  this.name = "Rarity";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
 };
-classesGauntlet.GuildHall.Sorcerer.prototype = new classesGauntlet.GuildHall.Mage();
+classesGauntlet.GuildHall.Rarity.prototype = new classesGauntlet.GuildHall.Mage();
 
 
 /*
     STEALTH CLASSES
-      - Thief
-      - Ninja
-      - Assassin
+      - Snails
+      - Gilda
+      - Dash
  */
 
 classesGauntlet.GuildHall.Stealth = function() {
@@ -138,31 +138,31 @@ classesGauntlet.GuildHall.Stealth = function() {
 classesGauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();
 
 
-classesGauntlet.GuildHall.Thief = function() {
-  this.name = "Thief";
+classesGauntlet.GuildHall.Snails = function() {
+  this.name = "Snails";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-classesGauntlet.GuildHall.Thief.prototype = new classesGauntlet.GuildHall.Stealth();
+classesGauntlet.GuildHall.Snails.prototype = new classesGauntlet.GuildHall.Stealth();
 
 
-classesGauntlet.GuildHall.Ninja = function() {
-  this.name = "Ninja";
+classesGauntlet.GuildHall.Gilda = function() {
+  this.name = "Gilda";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
 };
-classesGauntlet.GuildHall.Ninja.prototype = new classesGauntlet.GuildHall.Stealth();
+classesGauntlet.GuildHall.Gilda.prototype = new classesGauntlet.GuildHall.Stealth();
 
 
-classesGauntlet.GuildHall.Assassin = function() {
-  this.name = "Assassin";
+classesGauntlet.GuildHall.Dash = function() {
+  this.name = "Dash";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus + 10;
   this.intelligenceBonus = this.intelligenceBonus + 5;
 };
-classesGauntlet.GuildHall.Assassin.prototype = new classesGauntlet.GuildHall.Stealth();
+classesGauntlet.GuildHall.Dash.prototype = new classesGauntlet.GuildHall.Stealth();
 
 
 
