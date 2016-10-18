@@ -2,6 +2,19 @@
 
 let $classSelected;
 let $weaponSelected;
+
+ $('#music').hide();
+
+
+$(".audioDemo").trigger('load');
+$('#music').hide();
+$('.audioDemo').prop("volume", 0.05);
+$(".audioDemo").bind("load", function() {
+    $(".alert-success").html("Audio Loaded succesfully");
+});
+$(".audioDemo").trigger('play');
+
+
 const enemyNames = ["Sarah the Twilight Sparkler", "Blair the Derpy Hooves", "Tommy the Applejack", "Justin the Sweetie Belle"];
 const appendPlayerName = [" Princess Celestia", " the AppleJack", " the Spike", " the Apple Bloom"];
 // randomNum between 0 - 3;
