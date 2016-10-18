@@ -55,9 +55,13 @@ $(document).ready(function() {
     });
   });
 
+// Attack button battle function
+
 $('#attack_button').click((event) =>{
   event.preventDefault();
-  $('#win__modal').modal("show");
+  player1.player1Attack(orc);
+  orc.enemyAttack(player1);
+  populateBattlePage();
 });
 
 $('#hide_modal').click((event)=>{
@@ -121,6 +125,7 @@ $('#hide_modal').click((event)=>{
     player1 = new Gauntlet.Combatants.Player();
     player1.playerName = $("#player-name").val();
     createOpponent();
+    $('#combat').html("");
     $("." + previousCard).show();
   });
 });
