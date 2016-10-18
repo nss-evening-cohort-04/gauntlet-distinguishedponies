@@ -53,7 +53,21 @@ var Gauntlet = (function(originalGauntlet) {
     this.class = newClass;
   };
 
+  originalGauntlet.Combatants.Player.prototype.player1Attack = function(target){
+    this.totalDamage = Math.floor(Math.random() * 10) + 0 + this.weapon.damage;
+    target.health -= this.totalDamage;
+      if(target.health <= 0){
+        $('#win__modal').modal("show");
+    }
+    // console.log(target.health);
+    console.log("Player1totalDamage",this.totalDamage);
+    console.log("Player1weaponDam", this.weapon.damage);
+  };
 
+  //  originalGauntlet.Combatants.Player.prototype.Spellattack = function(target){
+  //   this.totalDamage = this.baseDamage + this.Spell.damage;
+  //   target.health -= this.totalDamage;
+  // }
   originalGauntlet.Combatants.Player.prototype.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
