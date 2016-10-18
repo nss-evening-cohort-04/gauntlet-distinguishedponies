@@ -7,8 +7,6 @@
 /*
   Test code to generate a spell
  */
-// let spell = new Gauntlet.SpellBook.Sphere();
-// console.log("spell: ", spell.toString());
 let $classSelected;
 let $weaponSelected;
 const enemyNames = ["Sarah the Twilight Sparkler", "Blair the Derpy Hooves", "Tommy the Applejack", "Justin the Sweetie Belle"];
@@ -21,10 +19,11 @@ let player1 = new Gauntlet.Combatants.Player();
 
 var orc = new Gauntlet.Combatants.Orc();
 orc.enemyName = enemyNames[randomNum];
-// randomly assigned health between 50 - 100
-orc.health = Math.round(Math.random() * (100 - 50));
 orc.generateClass();
+// randomly assigned health between 50 - 100 + healthBonus
+orc.health = Math.floor((Math.random() * 50) + 50 + orc.class.healthBonus);
 orc.setWeapon(new Gauntlet.Weapons.BroadSword());
+console.log("orc", orc);
 
 $(document).ready(function() {
 
@@ -38,6 +37,8 @@ $(document).ready(function() {
       if(event === $classSelected) {
         // index applies the current function
         player1.setClass(new index());
+        // update HP based on $classSelected
+        player1.health += player1.class.healthBonus;
       }
     });
   });
@@ -50,24 +51,11 @@ $(document).ready(function() {
       if(event === $weaponSelected) {
         // index applies the current function
         player1.setWeapon(new index());
-        populateBattlePage();
+        // populateBattlePage();
       }
     });
   });
 
-  // battle page logic
-  function populateBattlePage() {
-    console.log("player1", player1);
-    $('#playerHp').html(`<h3>${player1.playerName}${appendPlayerName[randomNum]}</h3>
-                      <h4>You Have ${player1.health} HP</h4>
-                      <h4>Your weapon is a ${player1.weapon.name}
-                      <h4> Your Class is ${player1.class.name}`);
-    console.log("orc", orc);
-    $('#enemyHp').html(`<h3>${orc.enemyName}</h3>
-                      <h4>You Have ${orc.health} HP</h4>
-                      <h4>Your weapon is a ${orc.weapon.name}
-                      <h4> Your Class is ${orc.class.name}`);
-  }
   /*
     Show the initial view that accepts player name
    */
