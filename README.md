@@ -27,6 +27,15 @@ We have been tasked to finish building a simple web-based RPG that lets a human 
 ###Choose your weapon
 ![Chooseweapon](img/Chooseweapon.png)
 
+###Let's get it once
+![Battlepage](img/Battlepage.png)
+
+###You Lost
+![YouLost](img/Youlost.png)
+
+###You Win
+![Youwin](img/Youwin.png)
+
 ## NSS Requirements
 
 Once the player has chosen all options for class, weapon, etc., you need to have a battlefield view that fulfills the following criteria:

@@ -59,8 +59,12 @@ $(document).ready(function() {
 
 $('#attack_button').click((event) =>{
   event.preventDefault();
+
   player1.player1Attack(orc);
-  orc.enemyAttack(player1);
+  if(player1.health >= 0) {
+    // This prevents the enemy from attacking if he reaches 0 first
+    orc.enemyAttack(player1);
+  }
   populateBattlePage();
 });
 
@@ -125,6 +129,7 @@ $('#hide_modal').click((event)=>{
     player1 = new Gauntlet.Combatants.Player();
     player1.playerName = $("#player-name").val();
     createOpponent();
+    // Clear div
     $('#combat').html("");
     $("." + previousCard).show();
   });
