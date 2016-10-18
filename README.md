@@ -17,6 +17,15 @@ We have been tasked to finish building a simple web-based RPG that lets a human 
 1. The battlefield will populate. It is up to you to defeat the deadly Orc's. Will you rise or will you fall?
 1. Click on the "Attack" button to perform your melee. Once the winner or loser has been decided- A message to play again will appear. Do you dare?
 
+## Screenshots
+###Enter your Name
+![Entername](img/Entername.png)
+
+###Choose your class
+![Chooseclass](img/Chooseclass.png)
+
+###Choose your weapon
+![Chooseweapon](img/Chooseweapon.png)
 
 ## NSS Requirements
 
