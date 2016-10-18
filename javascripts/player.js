@@ -19,7 +19,7 @@ var Gauntlet = (function(originalGauntlet) {
     this.weapon = null;
 
     this.playerName = name || "unknown adventurer";
-    this.health = Math.floor(Math.random() * 40 + 50);
+    this.health = Math.floor(Math.random() * 40 + 100);
     this.limbs = ["head", "neck", "arm", "leg", "torso"];
     this.skinColor = "gray";
     this.skinColors = [this.skinColor];
@@ -54,7 +54,7 @@ var Gauntlet = (function(originalGauntlet) {
   };
 
   originalGauntlet.Combatants.Player.prototype.player1Attack = function(target){
-    this.totalDamage = Math.floor(Math.random() * 10) + 0 + this.weapon.damage;
+    this.totalDamage = Math.floor(Math.random() * 10) + 5 + this.weapon.damage;
     target.health -= this.totalDamage;
       if(target.health <= 0){
         $('#win__modal').modal("show");

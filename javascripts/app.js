@@ -68,7 +68,16 @@ $('#attack_button').click((event) =>{
   
   orc.enemyAttack(player1);
 
+
   populateBattlePage();
+
+});
+
+$('#hide_modal').click((event)=>{
+  console.log(event);
+
+  $('#win__modal').modal("hide");
+
 });
   // battle page logic
   function populateBattlePage() {
@@ -122,6 +131,8 @@ $('#attack_button').click((event) =>{
   $(".card__back").click(function(e) {
     var previousCard = $(this).attr("previous");
     $(".card").hide();
+    $("#win__modal").modal("hide");
+     $("#lose__modal").modal("hide");
     $("." + previousCard).show();
   });
 
