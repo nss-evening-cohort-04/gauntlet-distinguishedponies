@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
+  background-image: url('../img/bubblesbackground.jpg');
 }
 
 .field {
@@ -30,6 +31,7 @@ body {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  color: white;
 }
 
 .card__button {
@@ -38,7 +40,9 @@ body {
   text-align: center;
 }
 
-
+.field {
+  color: black;
+}
 /*
   Button styles
  */
@@ -57,16 +61,22 @@ body {
   min-width: 260px;
 }
 
-.btn--orange {
-  border-color: #FF4136;
+.back__btn {
+  border-color: #b6c1ff;
   color: white;
-  background-color: #FF4136;
+  background-color: #b6c1ff;
+}
+
+.btn--orange {
+  border-color: #21B6A8;
+  color: white;
+  background-color: #21B6A8;
 }
 
 .btn--blue {
-  border-color: #0074D9;
+  border-color: #F20056;
   color: white;
-  background-color: #0074D9;
+  background-color: #F20056;
 }
 
 .btn--yellow {
@@ -116,7 +126,7 @@ body {
 
 .stats {
   border-radius: 25px;
-  background-color: grey;
+  background-color: white;
   text-align: center;
   border: 10px solid black;
   width: 100%;
@@ -124,6 +134,28 @@ body {
   font-size: 1em;
 }
 
+.stat__font {
+  font-size: .75em;
+  padding: .35em;
+}
+
+#stat__name {
+  border-bottom: 4px solid pink;
+}
+
 .padding--top {
   padding-top: 1em;
+}
+
+/*Modal stying*/
+.modal-content {
+  text-align: center;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1em;
 }

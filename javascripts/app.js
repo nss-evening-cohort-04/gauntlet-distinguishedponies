@@ -8,13 +8,19 @@ const appendPlayerName = [" Princess Celestia", " the AppleJack", " the Spike", 
 let randomNum = Math.floor(Math.random() * 3) + 0;
 
 let player1 = new Gauntlet.Combatants.Player();
+var orc;
 
-var orc = new Gauntlet.Combatants.Orc();
-orc.enemyName = enemyNames[randomNum];
-orc.generateClass();
-// randomly assigned health between 50 - 100 + healthBonus
-orc.health = Math.floor((Math.random() * 50) + 50 + orc.class.healthBonus);
-orc.setWeapon(new Gauntlet.Weapons.BroadSword());
+
+function createOpponent() {
+  orc = new Gauntlet.Combatants.Orc();
+  orc.enemyName = enemyNames[randomNum];
+  orc.generateClass();
+  // randomly assigned health between 50 - 100 + healthBonus
+  orc.health = Math.floor((Math.random() * 50) + 50 + orc.class.healthBonus);
+  orc.setWeapon(new Gauntlet.Weapons.BroadSword());
+}
+
+createOpponent();
 
 $(document).ready(function() {
 
@@ -61,13 +67,13 @@ $('#hide_modal').click((event)=>{
   // battle page logic
   function populateBattlePage() {
     $('#playerHp').html(`<div id="stat__name"><h1>${player1.playerName}${appendPlayerName[randomNum]}</h1></div>
-                      <div id="stat__health"><span>You Have ${player1.health} HP</span></div>
-                      <div id="stat__weapon"><span>Your weapon is a ${player1.weapon.name}</span></div>
-                      <div id="stat__class"><span>Your Class is ${player1.class.name}</span></div>`);
-    $('#enemyHp').html(`<h3>${orc.enemyName}</h3>
-                      <h4>You Have ${orc.health} HP</h4>
-                      <h4>Your weapon is a ${orc.weapon.name}
-                      <h4> Your Class is ${orc.class.name}`);
+                      <div class="stat__font" id="stat__health"><span>You Have <strong>${player1.health}</strong> HP</span></div>
+                      <div class="stat__font" id="stat__weapon"><span>Your weapon is a <strong>${player1.weapon.name}</strong></span></div>
+                      <div class="stat__font" id="stat__class"><span>Your Class is <strong>${player1.class.name}</strong></span></div>`);
+    $('#enemyHp').html(`<div id="stat__name"><h1>${orc.enemyName}</h1></div>
+                      <div class="stat__font" id="stat__health"><span>You Have <strong>${orc.health}</strong> HP</span></div>
+                      <div class="stat__font" id="stat__weapon"><span>Your weapon is a <strong>${orc.weapon.name}</strong></span></div>
+                      <div class="stat__font" id="stat__class"><span>Your Class is <strong>${orc.class.name}</strong></span></div>`);
   }
   /*
     Show the initial view that accepts player name
@@ -110,7 +116,11 @@ $('#hide_modal').click((event)=>{
     var previousCard = $(this).attr("previous");
     $(".card").hide();
     $("#win__modal").modal("hide");
-     $("#lose__modal").modal("hide");
+    $("#lose__modal").modal("hide");
+    // reset player1
+    player1 = new Gauntlet.Combatants.Player();
+    player1.playerName = $("#player-name").val();
+    createOpponent();
     $("." + previousCard).show();
   });
 });
