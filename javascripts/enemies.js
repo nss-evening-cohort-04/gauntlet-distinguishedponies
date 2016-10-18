@@ -29,6 +29,16 @@ enemiesGauntlet.Enemies = {};
     this.weapon = newWeapon;
   };
 
+  enemiesGauntlet.Combatants.Orc.prototype.enemyAttack = function(target){
+    this.totalDamage = Math.floor(Math.random() * 10) + 0 + this.weapon.damage;
+    target.health -= this.totalDamage;
+      if(target.health <= 0){
+        $('#myModal').modal("show");
+    }
+    console.log("orcAttack", this.totalDamage);
+    console.log("orcWeaponDam2", this.weapon.damage);
+  };
+
   // enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Monster();
   enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Orc();
 

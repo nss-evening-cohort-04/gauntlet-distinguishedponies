@@ -40,7 +40,8 @@ $(document).ready(function() {
         // index applies the current function
         player1.setClass(new index());
         // update HP based on $classSelected
-        player1.health += player1.class.healthBonus;
+        player1.health = player1.health + player1.class.healthBonus;
+        console.log(player1);
       }
     });
   });
@@ -58,6 +59,12 @@ $(document).ready(function() {
     });
   });
 
+$('#attack_button').click((event) =>{
+  event.preventDefault();
+
+
+  console.log('test');
+});
   // battle page logic
   function populateBattlePage() {
     $('#playerHp').html(`<h3>${player1.playerName}${appendPlayerName[randomNum]}</h3>
