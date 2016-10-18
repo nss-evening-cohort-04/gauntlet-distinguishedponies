@@ -57,7 +57,7 @@ var Gauntlet = (function(originalGauntlet) {
     this.totalDamage = Math.floor(Math.random() * 10) + 0 + this.weapon.damage;
     target.health -= this.totalDamage;
       if(target.health <= 0){
-        $('#myModal').modal("show");
+        $('#win__modal').modal("show");
     }
     // console.log(target.health);
     console.log("Player1totalDamage",this.totalDamage);
