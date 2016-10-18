@@ -36,8 +36,9 @@ enemiesGauntlet.Enemies = {};
         $('#lose__modal').modal("show");
 
     }
-    $('#combat').append(`<h4>${orc.enemyName} attacks ${player1.playerName} with a ${orc.weapon.name} and scores ${this.totalDamage} hit points.`);
-    console.log("orcAttack", this.totalDamage);
+    $('#combat').prepend(`<span id="player__name__color">${orc.enemyName}</span> attacks <span id="player__name__color">${player1.playerName}${appendPlayerName[randomNum]}</span><br/>
+                           with a ${orc.weapon.name} and scores <span id="enemy__name__color">${this.totalDamage}</span> hit points.<br/>`);
+
   };
 
   enemiesGauntlet.Combatants.Orc.prototype = new enemiesGauntlet.Combatants.Orc();

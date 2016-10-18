@@ -58,16 +58,11 @@ var Gauntlet = (function(originalGauntlet) {
     target.health -= this.totalDamage;
       if(target.health <= 0){
         $('#win__modal').modal("show");
-
     }
-    $('#combat').html(`<h4>${player1.playerName} attacks ${orc.enemyName} with a ${player1.weapon.name} and scores ${this.totalDamage} hit points.`);
-
-    console.log("Player1totalDamage",this.totalDamage);
+    $('#combat').prepend(`<span id="player__name__color">${player1.playerName}${appendPlayerName[randomNum]}</span> attacks <span id="player__name__color">${orc.enemyName}</span><br/>
+                          with a ${player1.weapon.name} and scores <span id="enemy__name__color">${this.totalDamage}</span> hit points.<br/>`);
   };
 
-  //  originalGauntlet.Combatants.Player.prototype.Spellattack = function(target){
-  //   this.totalDamage = this.baseDamage + this.Spell.damage;
-  //   target.health -= this.totalDamage;
   // }
   originalGauntlet.Combatants.Player.prototype.generateClass = function() {
     // Get a random index from the allowed classes array

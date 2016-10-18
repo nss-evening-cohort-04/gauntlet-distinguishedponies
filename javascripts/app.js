@@ -56,7 +56,6 @@ $(document).ready(function() {
   });
 
 // Attack button battle function
-
 $('#attack_button').click((event) =>{
   event.preventDefault();
 
@@ -83,6 +82,7 @@ $('#hide_modal').click((event)=>{
                       <div class="stat__font" id="stat__weapon"><span>Your weapon is a <strong>${orc.weapon.name}</strong></span></div>
                       <div class="stat__font" id="stat__class"><span>Your Class is <strong>${orc.class.name}</strong></span></div>`);
   }
+
   /*
     Show the initial view that accepts player name
    */
@@ -128,6 +128,7 @@ $('#hide_modal').click((event)=>{
     // reset player1
     player1 = new Gauntlet.Combatants.Player();
     player1.playerName = $("#player-name").val();
+    // create new opponent
     createOpponent();
     // Clear div
     $('#combat').html("");
