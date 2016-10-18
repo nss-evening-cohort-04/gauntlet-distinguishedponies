@@ -35,6 +35,10 @@ enemiesGauntlet.Enemies = {};
       if(target.health <= 0){
         $('#lose__modal').modal("show");
     }
+
+    $('#combat').append(`<h4>${orc.enemyName} attacks ${player1.playerName} with a ${orc.weapon.name} and scores ${this.totalDamage} hit points.`);
+
+
     console.log("orcAttack", this.totalDamage);
     console.log("orcWeaponDam2", this.weapon.damage);
   };

@@ -59,9 +59,10 @@ var Gauntlet = (function(originalGauntlet) {
       if(target.health <= 0){
         $('#win__modal').modal("show");
     }
-    // console.log(target.health);
+
+    $('#combat').html(`<h4>${player1.playerName} attacks ${orc.enemyName} with a ${player1.weapon.name} and scores ${this.totalDamage} hit points.`);
+    
     console.log("Player1totalDamage",this.totalDamage);
-    console.log("Player1weaponDam", this.weapon.damage);
   };
 
   //  originalGauntlet.Combatants.Player.prototype.Spellattack = function(target){
