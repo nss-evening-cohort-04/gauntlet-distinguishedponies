@@ -132,6 +132,7 @@ body {
   width: 100%;
   height: 300px;
   font-size: 1em;
+  overflow: auto;
 }
 
 .stat__font {
@@ -159,7 +160,19 @@ body {
 
 .modal-title {
   font-size: 1em;
-
-
-
   margin-left: 100px;
+}
+
+#combat {
+  font-size: .55em;
+}
+
+#player__name__color {
+  color: red;
+  font-weight: 700;
+}
+
+#enemy__name__color {
+  font-weight: 700;
+  color: black;
+}
