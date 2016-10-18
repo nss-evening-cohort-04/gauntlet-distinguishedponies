@@ -7,6 +7,8 @@
 /*
   Test code to generate a spell
  */
+// let spell = new Gauntlet.SpellBook.Sphere();
+// console.log("spell: ", spell.toString());
 let $classSelected;
 let $weaponSelected;
 const enemyNames = ["Sarah the Twilight Sparkler", "Blair the Derpy Hooves", "Tommy the Applejack", "Justin the Sweetie Belle"];
@@ -51,11 +53,23 @@ $(document).ready(function() {
       if(event === $weaponSelected) {
         // index applies the current function
         player1.setWeapon(new index());
-        // populateBattlePage();
+        populateBattlePage();
       }
     });
   });
 
+  // battle page logic
+  function populateBattlePage() {
+    $('#playerHp').html(`<h3>${player1.playerName}${appendPlayerName[randomNum]}</h3>
+                      <h4>You Have ${player1.health} HP</h4>
+                      <h4>Your weapon is a ${player1.weapon.name}
+                      <h4> Your Class is ${player1.class.name}`);
+    $('#enemyHp').html(`<h3>${orc.enemyName}</h3>
+                      <h4>You Have ${orc.health} HP</h4>
+                      <h4>Your weapon is a ${orc.weapon.name}
+                      <h4> Your Class is ${orc.class.name}`);
+
+  }
   /*
     Show the initial view that accepts player name
    */
