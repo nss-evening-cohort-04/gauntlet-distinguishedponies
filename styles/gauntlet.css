@@ -123,3 +123,8 @@ body {
 .padding--top {
   padding-top: 1em;
 }
+
+
+.modal-image {
+  margin-left: 100px;
+}

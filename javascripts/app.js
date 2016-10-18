@@ -59,12 +59,18 @@ $(document).ready(function() {
     });
   });
 
+// Attack button battle function
+
 $('#attack_button').click((event) =>{
   event.preventDefault();
+  
+  player1.player1Attack(orc);
+  
+  orc.enemyAttack(player1);
 
-  $('#win__modal').modal("show");
 
-  console.log('test');
+  populateBattlePage();
+
 });
 
 $('#hide_modal').click((event)=>{
